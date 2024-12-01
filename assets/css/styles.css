@@ -1,0 +1,616 @@
+:root {
+  --text-primary: #311b92;
+}
+body {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb, #c645e6, #63e3ed);
+  background-size: 400% 400%;
+  /* animation: gradientBackground 60s ease infinite; */
+  height: 100vh;
+  margin: 0;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  display: flex;
+  margin-left: 30px;
+}
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.editor{
+    margin-right: 25px;
+}
+.header {
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-size: 24px;
+  margin: 20px 20px 0px 50px;
+}
+.editor__section {
+  position: relative;
+  width: 605px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  padding: 31px 42px 40px 42px;
+}
+.editor__label {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px 0px 10px 0px;
+}
+/* Kiểu cho select */
+.editor__post-to--select {
+    width: 605px; /* Độ rộng của select */
+    padding: 10px; /* Khoảng cách bên trong */
+    border: 2px solid var(--text-primary); /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    background-color: #f9f9f9; /* Màu nền */
+    font-size: 16px; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+    cursor: pointer; /* Con trỏ khi hover */
+    appearance: none; /* Ẩn kiểu mặc định của select */
+    background-image: url('data:image/png;base64,...'); /* Thay đổi hình ảnh mũi tên */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Vị trí hình ảnh */
+    background-size: 15px; /* Kích thước hình ảnh */
+}
+
+/* Đổi màu viền khi chọn */
+.editor__post-to--select:focus {
+    border-color: var(--text-primary); /* Đổi màu viền khi chọn */
+    outline: none; /* Ẩn đường viền mặc định */
+}
+
+/* Kiểu cho các tùy chọn */
+option {
+    padding: 10px; /* Khoảng cách bên trong cho tùy chọn */
+}
+.editor__media--desc {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 12px;
+  margin: 0px 0px 5px 0px;
+}
+.editor__media--btn {
+  height: 40px;
+  display: flex;
+}
+.media__btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border: 3px solid rgba(103, 58, 183, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 15px 0px 0px;
+}
+
+.media__btn--icon {
+  width: 20%;
+  margin-right: 10px;
+}
+.editor__input--textbox {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%; /* Chiều rộng của container */
+  max-width: 800px; /* Giới hạn chiều rộng tối đa */
+  /* padding: 10px; */
+  /* border: 2px solid #ccc; */
+  border-radius: 5px;
+  /* margin: 20px auto; */
+}
+.input__textbox--textarea {
+  width: 100%; /* Chiều rộng cố định */
+  min-height: 200px; /* Chiều cao tối thiểu */
+  max-height: 500px; /* Chiều cao tối đa (nếu cần) */
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(103, 58, 183, 0.8);
+  border-radius: 5px;
+  resize: none; /* Vô hiệu hoá kéo dãn bằng chuột */
+  overflow: hidden; /* Ẩn thanh cuộn */
+  box-sizing: border-box; /* Bao gồm padding và border */
+}
+.input__textbox--icon {
+  /* width: 10%; */
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* bottom: 0px; */
+}
+.editor__input--button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* left: 0px; */
+}
+
+.editor__input--button-icon {
+  margin-top: 10px;
+  height: 30px;
+}
+.sharp-icon {
+  bottom: 5px;
+  right: 40px;
+}
+.emoji-icon {
+  bottom: 0px;
+  right: 10px;
+}
+.textbox__icon--emoji {
+  height: 30px;
+}
+.textbox__icon--sharp {
+  height: 20px;
+}
+.editor__input--btn-func {
+  position: relative;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 10px 0px 0px 0px;
+}
+.input__btn-func--analy {
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  padding: 9px 20px 9px 20px;
+  /* border: 3px solid rgba(103, 58, 183, 0.8); */
+  background: rgba(103, 58, 183, 1);
+  color: #fff;
+  border-radius: 30px;
+}
+.editor__label--contain {
+  position: relative;
+}
+.label__schedule--desc {
+  top: 3px;
+  position: absolute;
+  right: 80px;
+}
+.label__schedule--switch {
+  position: absolute;
+  right: 10px;
+}
+/* Container toggle switch */
+.label__schedule--switch {
+  display: inline-block; /* Đảm bảo container hoạt động đúng */
+}
+
+.toggle-input {
+  display: none; /* Ẩn checkbox gốc */
+}
+
+.toggle-label {
+  display: inline-block; /* Để label có thể hoạt động giống div */
+  position: relative;
+  width: 60px; /* Chiều rộng nút cần gạt */
+  height: 30px; /* Chiều cao nút cần gạt */
+  background-color: #f1f1f1; /* Màu nền mặc định */
+  border-radius: 30px; /* Bo tròn góc */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 24px; /* Kích thước cần gạt */
+  height: 24px;
+  background-color: #ffffff; /* Màu cần gạt */
+  border-radius: 50%; /* Tạo hình tròn */
+  top: 3px; /* Căn chỉnh theo chiều cao */
+  left: 3px; /* Vị trí ban đầu */
+  transition: transform 0.3s ease;
+}
+.toggle-input:checked + .toggle-label {
+  background-color: #ffffff; /* Màu nền khi bật */
+}
+
+.toggle-input:checked + .toggle-label::after {
+  transform: translateX(30px); /* Di chuyển cần gạt sang phải */
+  background-color: #00bcd4; /* Màu cần gạt khi bật */
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  /* background: #fff; */
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.radio-option input {
+  display: none;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00bcd4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.custom-radio::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #00bcd4;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.radio-option input:checked + .custom-radio::after {
+  transform: scale(1);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.text p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+.editor__nav-func {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 38px;
+  padding: 8px 25px 8px 25px;
+  border-radius: 12px;
+  border: 3px solid rgba(103, 58, 183, 0.8);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 15px 0px 0px;
+  top: 7px;
+  
+}
+.editor__nav-func#cancel {
+    right: 240px;
+}
+.editor__nav-func#finish{
+    right: 110px
+}
+.editor__nav-func#post{
+    right: 0px
+}
+.editor__nav-func:hover {
+  background-color: rgba(103, 58, 183, 1);
+  color: #fff;
+  transition: 0.3s ease;
+}
+.preview{
+    margin-left: 25px;
+
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto; */
+}
+.header#preview{
+    font-size: 20px;
+    width: 600px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 600px;
+    /* min-height: 100vh; */
+    background: #fff;
+    /* border-radius: 15px; */
+}
+
+.wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Roboto; */
+}
+
+.custom-card {
+    border-radius: 10px;
+    position: relative;
+    width: 600px;
+    min-height: 450px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15),
+                -5px -5px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+.custom-card {
+    position: relative;
+    width: 600px;
+    min-height: 450px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15),
+                -5px -5px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.custom-card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-card .top .user_details {
+    display: flex;
+    align-items: center;
+}
+
+.custom-card .top .user_details .profile_img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.custom-card .top .user_details h3 {
+    font-size: 18px;
+    color: black;
+    font-weight: 900;
+    line-height: 1em;
+    cursor: pointer;
+}
+
+.hour {
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.globDot {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -4px;
+    font-size: 20px;
+    align-items: center;
+    color: #0000004b;
+}
+
+ul {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul .li__globe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 48px;
+    list-style: none;
+    text-align: center;
+}
+
+ul li img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top: -1.5px;
+}
+
+.dot {
+    transform: rotate(90deg) scale(0.6);
+    cursor: pointer;
+    margin-top: -16px;
+}
+
+.message {
+    font-weight: 400;
+    margin-top: 5px;
+    color: #777;
+    line-height: 1.5em;
+}
+
+.imgBg {
+    position: relative;
+    width: 600px;
+    height: 420px;
+    margin: 10px 0 15px;
+    margin-left: -20px;
+    overflow: hidden;
+}
+
+.coverFull {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns img {
+    max-width: 30px;
+    cursor: pointer;
+}
+
+.btns .left img {
+    margin-right: 8px;
+}
+
+.likes {
+    margin-top: -28px;
+    margin-left: 33px;
+    font-size: 17px;
+    color: #777;
+    text-align: center;
+    font-weight: 500;
+}
+
+.right h4 {
+    margin-top: 5px;
+    margin-left: 33px;
+    font-size: 17px;
+    color: #777;
+    text-align: center;
+    font-weight: 500;
+}
+
+.border {
+    position: relative;
+    width: 100%;
+    height: 0.5px;
+    background: #0000004b;
+    margin-top: 15px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.icon img {
+    max-width: 30px;
+    cursor: pointer;
+}
+
+.like {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.like img {
+    position: relative;
+    max-width: 70px;
+    cursor: pointer;
+    margin: 0 40px;
+    margin-top: -15px;
+}
+
+.like img:nth-child(1) {
+    width: 55px;
+    margin-right: 20px;
+}
+
+.like img:nth-child(2) {
+    width: 33px;
+    margin-right: 15px;
+}
+
+.border_bott {
+    position: relative;
+    width: 100%;
+    height: 0.5px;
+    background: #0000004b;
+    margin-top: -15px;
+}
+
+.addComments {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.addComments .userimg {
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.text_ {
+    background: #F0F2F5;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #262626;
+    border-radius: 20px;
+}
+
+input[type="text"] {
+    position: relative;
+    padding: 0 25px;
+}
+
+@media (max-width: 640px) {
+    .custom-card {
+        width: 350px;
+    }
+
+    .imgBg {
+        width: 350px;
+    }
+}

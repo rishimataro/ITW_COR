@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo bài viết</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./src/Post.js"></script>
+    
+
+  </head>
+  <body>
+    <header class="header"><h1>Tạo bài viết</h1></header>
+    <main class="main">
+      <section class="editor">
+        <div class="editor__section editor__post-to">
+          <div class="editor__label">Đăng lên:</div>
+          <select class="editor__post-to--select" id="post-to">
+            <option value="0">Facebook</option>
+            <option value="1">Instagram</option>
+            <option value="2">Twitter</option>
+            <!-- Tạo thêm các bài viết đã tạo ở đây -->
+          </select>
+        </div>
+        <div class="editor__section editor__media">
+          <div class="editor__label">File phương tiện:</div>
+          <div class="editor__media--desc">
+            Chia sẻ ảnh hoặc video. Bài viết trên Instagram không được vượt quá
+            10 ảnh.
+          </div>
+          <div class="editor__media--btn">
+            <span class="media__btn media__btn--add-img">
+              <img src="./assets/icons/upload-img-icon.svg" class="media__btn--icon">
+              </img>
+              <span class="media__btn--label">Thêm ảnh</span>
+            </span>
+            <span class="media__btn media__btn--add-vid">
+              <img src="./assets/icons/upload-vid-icon.svg" class="media__btn--icon">
+              </img>
+              <span class="media__btn--label">Thêm video</span>
+            </span>
+            <span class="media__btn media__btn--use-temp">
+              <img src="./assets/icons/use-temp-icon.svg" class="media__btn--icon"
+                >
+              </img>
+              <span class="media__btn--label">Dùng mẫu</span>
+            </span>
+          </div>
+        </div>
+        <div class="editor__section editor__input">
+          <div class="editor__label">Chi tiết bài viết</div>
+          <div class="editor__input--textbox">
+            <textarea placeholder="Văn bản..." contenteditable="true" class="input__textbox--textarea"></textarea>
+            <span class="input__textbox--icon sharp-icon">
+              <img src="./assets/icons/textbox-sharp-icon.svg" alt="" class="textbox__icon--sharp">
+            </span>
+            <span class="input__textbox--icon emoji-icon">
+              <img src="./assets/icons/textbox-emoji-icon.svg" alt="" class="textbox__icon--emoji">
+            </span>
+          </div>
+          <div class="editor__input--btn-func">
+            <span class="input__btn-func--emoji editor__input--button">
+              <img src="./assets/icons/func-btn_emoji.svg" alt="" class="editor__input--button-icon btn-func__emoji-icon">
+            </span>
+            <span class="input__btn-func--marker editor__input--button">
+              <img src="./assets/icons/func-btn_addr-marker.svg" alt="" class="editor__input--button-icon btn-func__marker-icon">
+            </span>
+            <span class="input__btn-func--messenger editor__input--button">
+              <img src="./assets/icons/func-btn_messenger.svg" alt="" class="editor__input--button-icon btn-func__messenger-icon">
+            </span>
+            <span class="input__btn-func--phone editor__input--button">
+              <img src="./assets/icons/func-btn_phone.svg" alt="" class="editor__input--button-icon btn-func__phone-icon">
+            </span>
+            <span class="input__btn-func--cursor editor__input--button">
+              <img src="./assets/icons/func-btn_cursor.svg" alt="" class="editor__input--button-icon btn-func__cursor-icon">
+            </span>
+            <span class="input__btn-func--cursor editor__input--button">
+              <img src="./assets/icons/func-btn_chat-dots.svg" alt="" class="editor__input--button-icon btn-func__chat-dot-icon">
+            </span>
+            <span class="input__btn-func--analy editor__input--button">
+              Phân tích
+            </span>
+          </div>
+        </div>
+      <div class="editor__section editor__section--schedule">
+        <div class="editor__label--contain">
+          <span class="label__schedule--label editor__label">Lựa chọn lịch đăng:</span>
+          <span class="label__schedule--desc label__contain--desc">Đặt ngày và giờ</span>
+          <div class="label__schedule--switch">
+            <input type="checkbox" id="switch" class="toggle-input">
+            <label for="switch" class="toggle-label"></label>
+          </div>
+        </div>
+      </div>
+        <div class="editor__section editor__selection--privacy">
+          <div class="editor__label">Cài đặt quyền riêng tư:</div>
+          <div class="label__media--desc">Điều chỉnh phần cài đặt quyền riêng tư để kiểm soát ai sẽ nhìn thấy bài viết của bạn ở Bảng tin, tab Watch, kết quả tìm kiếm và trang cá nhân của bạn.</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="privacy" value="everyone" checked>
+              <span class="custom-radio"></span>
+              <div class="text">
+                <strong>Mọi người</strong>
+                <p>Bất kỳ ai trên hoặc ngoài Facebook đều có thể xem bài viết của bạn.</p>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="privacy" value="restricted">
+              <span class="custom-radio"></span>
+              <div class="text">
+                <strong>Hạn chế</strong>
+                <p>Chọn những người nhất định trên Facebook có thể xem bài viết của bạn.</p>
+              </div>
+            </label>
+          </div>
+          </div>
+        <div class="editor__section">
+            <button class="editor__nav-func" id="cancel">Hủy</button>
+            <button class="editor__nav-func" id="finish" >Hoàn tất</button>
+            <button class="editor__nav-func" id="post">Đăng</button>
+        </div>
+      </section>
+      <section class="preview">
+        <div class="header" id="preview"><h1>Xem trước trên bảng Feed</h1></div>
+        <div class="wrapper">
+          <div class="custom-card">
+              <div class="top">
+                  <div class="user_details">
+                      <div class="profile_img">
+                          <img src="./assets/icons/Avatar Task 3_1.png" alt="user" class="cover">
+                      </div>
+                      <h3>Cor Team<br><span class="hour">20 h</span>
+                      <span class="globDot">.</span></h3>
+                      <ul>
+                          <li class="li__globe">
+                              <img src="./assets/icons/globe.png" alt="globe" class="cover">
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="dot">
+                      <img src="./assets/icons/dot.png" alt="dot">
+                  </div>
+              </div>
+              <h4 class="message"></h4>
+              <div class="imgBg">
+                  <img alt="Bấm vào nút thêm ảnh để upload ảnh (1 ảnh)" class="coverFull">
+              </div>
+              <div class="btns">
+                  <div class="left">
+                      <img src="./assets/icons/like.png" alt="like">
+                      <h4 class="likes">499</h4>
+                  </div>
+                  <div class="right">
+                      <h4>919 comments 500 shares</h4>
+                  </div>
+              </div>
+              <div class="border"></div>
+              <div class="icon">
+                  <div class="like">
+                      <img src="./assets/icons/gray_like.png" alt="like" class="graylike" onclick="likeButton()">
+                      <img src="./assets/icons/comments.png" alt="comments">
+                      <img src="./assets/icons/share.png" alt="share">
+                  </div>
+              </div>
+              <div class="border_bott"></div>
+              <div class="addComments">
+                  <div class="userimg">
+                      <img src="./assets/icons/Avatar Task 3_1.png" alt="user" class="cover">
+                  </div>
+                  <input type="text" class="text_" placeholder="Write a comment...">
+              </div>
+          </div>
+      </div>
+      </section>
+    </main>
+  </body>
+</html>

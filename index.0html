@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tạo Bài Viết</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f1f8ff, #fce4ec);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .header {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .content {
+      display: flex;
+      gap: 20px;
+    }
+    .left, .right {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button.cancel {
+      background-color: #ccc;
+    }
+    button.complete {
+      background-color: #6200ea;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">Tạo Bài Viết</div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Left Column -->
+      <div class="left">
+        <div class="section">
+          <label for="post-to">Đăng lên:</label>
+          <select id="post-to">
+            <option>Trang cá nhân</option>
+            <option>Nhóm</option>
+            <option>Trang</option>
+          </select>
+        </div>
+
+        <div class="section">
+          <label>File phương tiện:</label>
+          <div>
+            <button>Thêm ảnh</button>
+            <button>Thêm video</button>
+            <button>Dùng mẫu</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <label for="post-content">Chi tiết bài viết:</label>
+          <textarea id="post-content" rows="5" placeholder="Văn bản..."></textarea>
+        </div>
+
+        <div class="section">
+          <label for="schedule">Lựa chọn lịch đăng:</label>
+          <input type="checkbox" id="schedule"> Đặt ngày và giờ
+        </div>
+
+        <div class="section">
+          <label>Cài đặt quyền riêng tư:</label>
+          <div>
+            <input type="radio" id="public" name="privacy" checked>
+            <label for="public">Mọi người</label>
+          </div>
+          <div>
+            <input type="radio" id="restricted" name="privacy">
+            <label for="restricted">Hạn chế</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right">
+        <h3>Xem trước trên bảng Feed</h3>
+        <div class="preview">
+          <!-- Placeholder for post preview -->
+          <img src="placeholder-image.png" alt="Preview" style="width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <button class="cancel">Hủy</button>
+      <button class="complete">Hoàn tất</button>
+      <button class="post">Đăng</button>
+    </div>
+  </div>
+</body>
+</html>
