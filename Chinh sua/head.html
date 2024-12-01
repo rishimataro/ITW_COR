@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="header-right">
+                <img src="./images/logo.png" alt="Logo Team COR" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Cài đặt an toàn</a></li>
+                <li><a href="#">Hỗ trợ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-section">
+                <img src="./images/Profile.png" alt="Profile" class="profile-image">
+                <h3>Nguyễn Thị Bao Dung</h3>
+                <p class="subtitle"><em>Nhà sáng tạo nội dung</em></p>
+            </div>
+            <div class="right-section">
+                <div class="social-buttons">
+                    <button class="social-button facebook-button">Facebook</button>
+                    <button class="social-button tiktok-button">TikTok</button>
+                    <button class="social-button instagram-button">Instagram</button>
+                </div>
+                <p class="social-text">Thêm mạng xã hội?</p>
+                <div class="social-container">
+                    <div class="social-icons">
+                        <img src="./images/facebook-icon.png" alt="Facebook Icon">
+                        <img src="./images/tiktok-icon.png" alt="Tiktok Icon">
+                        <img src="./images/instagram-icon.png" alt="Instagram Icon">
+                    </div>
+                    <p class="faded-text">Hãy sao chép liên kết trang cá nhân của bạn vào đây</p>
+                    <div class="input-container">
+                        <input type="text" placeholder="Link Facebook">
+                        <input type="text" placeholder="Link Tiktok">
+                        <input type="text" placeholder="Link Instagram">
+                        <input type="text" placeholder="Khác">
+                    </div>
+                    <div class="button-group">
+                        <button class="save-button">Lưu</button>
+                        <button class="delete-button">Xóa tất cả</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="filter-title">Cài đặt bộ lọc nội dung</h2> <!-- Di chuyển tiêu đề ra ngoài -->
+        
+        <div class="filter-settings">
+            <div class="filter-level-container">
+                <div class="label-container">
+                    <label for="filter-level">Mức độ lọc:</label>
+                    <span id="filter-level-value">50%</span> <!-- Phần hiển thị mức độ lọc -->
+                </div>
+                <input type="range" id="filter-level" min="0" max="100" value="50"> <!-- Thanh trượt -->
+            </div>
+        
+            <div class="filter-options">
+                <div class="filter-effect-container">
+                    <label for="filter-effect">Hiệu ứng lọc:</label>
+                    <select id="filter-effect">
+                        <option value="blur">Làm mờ</option>
+                        <option value="darken">Bôi đen</option>
+                        <option value="erase">Xóa</option>
+                    </select>
+                </div>
+        
+                <div class="trained-model-container">
+                    <label for="trained-model">Lựa chọn trained model:</label>
+                    <select id="trained-model">
+                        <option value="model1">Model 1</option>
+                        <option value="model2">Model 2</option>
+                        <option value="model3">Model 3</option>
+                    </select>
+                </div>
+            </div>
+        
+            <label for="keywords">Từ khóa cần lọc:</label>
+            <div class="keyword-container">
+                <input type="text" id="keywords" placeholder="Nhập từ khóa">
+                <button class="add-keyword">+</button>
+            </div>
+            <div class="keyword-list" id="keyword-list"></div>
+        
+            <div class="button-group">
+                <button class="suggest-button">Gợi ý</button>
+                <button class="save-close-button">Lưu và tắt trình duyệt</button>
+                <button class="save-post-button">Lưu và chuyển sang đăng bài</button>
+            </div>
+        </div>
+        
+        <img src="./images/downbackground.png" alt="Background" class="background-image">
+        <img src="./images/smallbackground.png" alt="Small Background" class="small-background-image">
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
