@@ -1,0 +1,480 @@
+. {
+    /* all*/
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.line {
+  width: 2px;          /* Chiều rộng của đường thẳng */
+  background-color: black; /* Màu đường thẳng */
+  height: 100%;        /* Chiều cao bằng chiều cao trang */
+}
+.button-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.name-header {
+    padding: 5px;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 0px;
+    color: #000;
+    font-family: system-ui, -apple-system, blinkmacsystemfont, 'segoe ui', roboto, oxygen, ubuntu, cantarell, 'open sans', 'helvetica neue', sans-serif;
+}
+
+/* Kiểu chung cho tất cả các label */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng đường kẻ dưới cho label với class 'label-false' */
+.label-false::after {
+    content: ''; /* Tạo một phần tử trống */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #5c2c9e; /* Màu của đường kẻ dưới */
+    transition: width 0.3s ease; /* Tạo hiệu ứng mở rộng chiều rộng */
+}
+
+/* Khi hover vào label-false */
+.label-false:hover::after {
+    width: 100%; /* Đường kẻ dưới mở rộng từ trái sang phải */
+}
+
+
+/* Kiểu cho label với class 'label-true' */
+.label-true {
+    color: white; /* Màu chữ cho label-true */
+}
+
+/* Hiệu ứng đường kẻ dưới cho label-true */
+.label-true::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000000; /* Màu của đường kẻ dưới */
+    transition: width 0.3s ease;
+}
+
+.label-true:hover::after {
+    width: 100%;
+}
+
+.label-true:hover {
+    color: #4B0082; /* Đổi màu chữ khi hover */
+}
+
+.label-false:hover {
+    color: #4B0082; /* Đổi màu chữ khi hover */
+}
+
+.wrap {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 0px;
+    background-color: #fff;
+}
+
+.wrap img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.wrap label {
+    margin: 0 20px;
+    cursor: pointer;
+}
+.image-container{
+    height: 60px;
+}
+.label-true {
+    color: blue;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.content-filter {
+    z-index: 10;
+    padding: 50px 50px 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 50px;
+}
+ .right {
+    width: 55%;
+}
+.title-2 {
+    margin-left: -4px;
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.url {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.name-header {
+    align-items: center;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: #000;
+    font-family: system-ui, -apple-system, blinkmacsystemfont, 'segoe ui', roboto, oxygen, ubuntu, cantarell, 'open sans', 'helvetica neue', sans-serif;
+}
+
+.target {
+    width: 100%;
+    margin: -25px 10px;
+    color: cornflowerblue;
+}
+
+.btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    .social-media img {
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+    }
+    footer {
+        margin-top: 20px;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #222;
+        color: white;
+    }
+}
+.save {
+    padding: 10px 30px;
+    margin: 5px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #673ab7;    
+}
+.del {
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    color :black; 
+    font-weight: bold;
+    border: 2px solid #673ab7;
+    background-color: #ffffff;     
+}
+.btn-info {
+    font-size : 15px;
+    color : white;
+    background-color : #00bcd4; 
+    border : 2px solid #00bcd4;
+    border-radius : 20px;
+    padding : 5px 25px;
+    margin-bottom : 10px;
+}
+.btn-check {
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    height: 40px;
+
+}
+.btn-check:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#filter_input {
+    width: 100%;  /* Điều chỉnh chiều rộng của thanh trượt (80% chiều rộng của phần tử chứa) */
+    margin: 0 auto;  /* Căn giữa thanh trượt theo chiều ngang */
+    -webkit-appearance: none;  /* Loại bỏ kiểu dáng mặc định của thanh trượt trên trình duyệt Webkit */
+    appearance: none;  /* Loại bỏ kiểu dáng mặc định */
+    height: 3px;  /* Chiều cao thanh trượt */
+    background: #ddd;  /* Màu nền của thanh trượt */
+    border-radius: 5px;  /* Làm tròn góc của thanh trượt */
+    background: #673ab7;  /* Màu của đầu thanh trượt */
+}
+
+#filter_input::-webkit-slider-thumb {
+    -webkit-appearance: none;  /* Loại bỏ kiểu dáng mặc định của thanh trượt */
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #673ab7;  /* Màu của đầu thanh trượt */
+    cursor: pointer;  /* Đổi con trỏ thành hình tay khi di chuột vào thanh trượt */
+}
+#filter_input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: whitesmoke;  /* Màu của đầu thanh trượt */
+    cursor: pointer;
+}
+.btn-del {
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    color :black;
+    font-weight: bold;
+    border: 2px solid #00bcd4;
+    background-color: #ffffff;
+}
+.btn-save {
+    text-decoration-color:white;
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    color :black;
+    font-weight: bold;
+    border: 2px solid #00bcd4;
+    background-color: #00bcd4;
+    color: white;
+}
+.container {
+    display: grid;  /* Thiết lập grid layout */
+    grid-template-columns: 1fr 1fr;  /* Chia đều không gian thành 2 cột */
+    gap: 20px;  /* Khoảng cách giữa các phần tử */
+    align-items: center;  /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.filter-effect-container div {
+    display: flex;
+}
+
+.filter-effect-container label,
+.trained-model-container label {
+    margin-bottom: 5px; /* Khoảng cách dưới nhãn */
+}
+
+.filter-effect-container select,
+.trained-model-container select {
+    width: 100%; /* Đặt chiều rộng 100% cho ô chọn */
+    padding: 10px; /* Thêm padding cho ô chọn */
+    border: 1px solid #ccc; /* Viền cho ô chọn */
+    border-radius: 5px; /* Bo tròn góc */
+}
+.keyword-container {
+    display: flex;
+    align-items: center;
+}
+.keyword-container input {
+    width: 1000px; /* Đặt chiều rộng cho ô nhập từ khóa */
+    height: 40px; /* Đặt chiều cao cho ô nhập từ khóa */
+    padding: 10px; /* Thêm padding để tạo khoảng cách bên trong */
+    border: 1px solid #ccc; /* Viền cho ô nhập */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 16px; /* Kích thước chữ trong ô nhập */
+}
+.filter-options{
+    display: flex;
+    flex-direction: row; /* Sắp xếp các div theo hàng */
+    justify-content: space-between;
+    width: 100%; /* Chiều rộng container */
+}
+.column-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 480px;
+}
+.column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 480px;
+}
+.filter-effect-container{
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+}
+.trained-model-container{
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+}
+.button-group2 {
+    padding-top: 10px;
+    text-align: center;
+
+}
+.button-group2 .suggest-button,
+.button-group2 .save-post-button {
+    background-color: white; /* Màu nền xanh cho các nút này */
+    border: 2px solid #00BCD4;
+    border-radius: 20px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Làm chữ đậm hơn nếu cần */
+    margin: 0 10px; /* Thêm khoảng cách bên trái và bên phải cho mỗi nút */
+    padding: 10px 15px; /* Padding cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+
+.button-group2 .suggest-button:hover,
+.button-group2 .save-close-button:hover,
+.button-group2 .save-post-button:hover {
+    background-color: #0097A7; /* Màu nền khi di chuột qua */
+}
+.button-group2 .save-close-button{
+    background-color: #00BCD4; /* Màu nền xanh cho các nút này */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Không có viền */
+    border-radius: 20px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Làm chữ đậm hơn nếu cần */
+    margin: 0 10px; /* Thêm khoảng cách bên trái và bên phải cho mỗi nút */
+    padding: 10px 15px; /* Padding cho nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+.filter {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    }
+
+/* Kiểu cho phần tử select */
+.filter-effect {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #00BCD4;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Kiểu cho phần tử mục tiêu cần áp dụng hiệu ứng */
+.effect-target {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng cho "Làm mờ" */
+.blur {
+    filter: blur(5px);
+}
+
+/* Hiệu ứng cho "Bôi đen" */
+.darken {
+    background-color: #333;
+    color: white;
+}
+
+/* Hiệu ứng cho "Xóa" */
+.erase {
+    background-color: transparent;
+    color: transparent;
+}
+.filter-effect:focus{
+    border-color: #00BCD4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+#keywordInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+#keywordInput:focus {
+    border-color: #00BCD4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+.keyword {
+    background-color: #00BCD4;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.keyword:hover {
+    background-color: #0097A7;
+    transform: scale(1.1);
+}
+
+.keyword:active {
+    background-color: #007C8A;
+}
+
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.keyword-container {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.instruction {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
