@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url("./images/Background.svg") no-repeat top right fixed,
+                url("./images/Dots.svg") no-repeat bottom left fixed;
+    background-size: contain;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0);
+    min-height: calc(100vh - 160px);
+}
+
+.hello {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hello h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #311B92;
+}
+
+.hello p {
+    font-size: 16px;
+    color: #808080;
+    font-style: italic;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 80px;
+    box-shadow: 0 3px 49px 9px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="password"] {
+    width: 800px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    border: 1px solid #00bcd4;
+    transition: border 0.25s ease-in-out;
+}
+
+.form-group:focus-within label {
+    color: #00bcd4;
+    font-weight: bold;
+    transition: color 0.25s ease-in-out, font-weight 0.25s ease-out;
+}
+
+.form-group button.upload-btn {
+    background: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    width: 150px;
+    float: left;
+    margin-left: 0;
+}
+
+.form-group button.upload-btn:hover {
+    background-color: #0097a7;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.form-group input[type="text"]#captcha {
+    width: 100%;
+}
+
+.captcha span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.refresh-captcha {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #00bcd4;
+}
+
+.refresh-captcha:hover {
+    color: #0097a7;
+    transition: color 0.25s ease-in-out;
+}
+
+.form-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid #00bcd4;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+
+.form-group input[type="checkbox"]:checked {
+    background-color: #00bcd4;
+    border-color: #0097a7;
+}
+
+.form-group input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 2px;
+    top: -2px;
+}
+
+.form-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.form-group a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.form-group a:hover {
+    text-decoration: underline;
+    color: #0097a7;
+}
+
+.form-group label::after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: #0097a7;
+    transition: background 0.25s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    font-size: 0.9rem;
+    color: #555;
+}

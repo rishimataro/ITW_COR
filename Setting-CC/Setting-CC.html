@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings for Content Creators</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../nav.css">
+</head>
+
+<body>
+    <header>
+        <nav class="header-container">
+            <div class="logo">
+                <a href="../Landing/landing.html"><img src="./images/logo.png" alt="Company Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="menu-item1">
+                    <a href="../Landing/landing.html" class="menu-link">
+                        <p>Trang chủ</p>
+                    </a>
+                </li>
+                <li class="menu-item1">
+                    <a href="../Setting-CC/Setting-CC.html" class="menu-link">
+                        <p>Cài đặt an toàn</p>
+                    </a>
+                </li>
+                <li class="menu-item1">
+                    <a href="#" class="menu-link">
+                        <p>Hỗ trợ</p>
+                    </a>
+                </li>
+                <li class="menu-item1">
+                    <a href="#" class="menu-link">
+                        <p>Liên hệ</p>
+                    </a>
+                </li>
+                <li class="menu-item1">
+                    <a href="#" class="menu-link">
+                        <p>FAQ</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-section">
+                <img src="./images/Profile.png" alt="Profile Picture" class="profile-image">
+                <h3>Nguyễn Thị Bao Dung</h3>
+                <p class="subtitle"><em>Nhà sáng tạo nội dung</em></p>
+            </div>
+            <div class="right-section">
+                <div class="social-buttons">
+                    <button class="social-button facebook-button">Facebook</button>
+                    <button class="social-button tiktok-button">TikTok</button>
+                    <button class="social-button instagram-button">Instagram</button>
+                </div>
+                <p class="social-text">Thêm mạng xã hội?</p>
+                <div class="social-container">
+                    <div class="social-icons">
+                        <img src="./images/facebook-icon.png" alt="Facebook Icon">
+                        <img src="./images/tiktok-icon.png" alt="TikTok Icon">
+                        <img src="./images/instagram-icon.png" alt="Instagram Icon">
+                    </div>
+                    <p class="faded-text">Hãy sao chép liên kết trang cá nhân của bạn vào đây</p>
+                    <div class="input-container">
+                        <input type="text" placeholder="Link Facebook">
+                        <input type="text" placeholder="Link Tiktok">
+                        <input type="text" placeholder="Link Instagram">
+                        <input type="text" placeholder="Khác">
+                    </div>
+                    <div class="button-group">
+                        <button class="save-button">Lưu</button>
+                        <button class="delete-button">Xóa tất cả</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="filter-title">Cài đặt bộ lọc nội dung</h2>
+
+        <div class="filter-settings">
+            <div class="filter-level-container">
+                <div class="label-container">
+                    <label for="filter-level">Mức độ lọc:</label>
+                    <span id="filter-level-value">0%</span>
+                </div>
+                <input type="range" id="filter-level" min="0" max="100" value="0">
+            </div>
+
+            <div class="filter-options">
+                <div class="filter-effect-container">
+                    <label for="filter-effect">Hiệu ứng lọc:</label>
+                    <select id="filter-effect">
+                        <option value="blur">Làm mờ</option>
+                        <option value="darken">Bôi đen</option>
+                        <option value="erase">Khảm</option>
+                    </select>
+                </div>
+
+                <div class="trained-model-container">
+                    <label for="trained-model">Lựa chọn trained model:</label>
+                    <select id="trained-model">
+                        <option value="model1">Chat GPT 4.0</option>
+                        <option value="model2">Claude AI</option>
+                        <option value="model3">Copilot</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="keywords">Từ khóa cần lọc:</label>
+            <div class="keyword-container">
+                <input type="text" id="keywords" placeholder="Nhập từ khóa">
+                <button class="add-keyword">+</button>
+            </div>
+            <div class="keyword-list" id="keyword-list"></div>
+
+            <div class="button-group">
+                <button class="suggest-button">Gợi ý</button>
+                <button class="save-close-button">Lưu và tắt trình duyệt</button>
+                <button class="save-post-button"><a href="../Post/Post.html">Lưu và chuyển sang đăng bài</a></button>
+            </div>
+        </div>
+
+        <img src="./images/downbackground.png" alt="Background Image" class="background-image">
+        <img src="./images/smallbackground.png" alt="Small Background Image" class="small-background-image">
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
