@@ -3,7 +3,7 @@
 ## Mô tả
 - Dành cho phụ huynh muốn quản lý con cái, và nhà sáng tạo nội dung cần kiểm tra nội dung trước khi đăng bài.
 - Liên kết trang cá nhân, cài đặt bộ lọc an toàn theo ý thích người dùng.
-- Tích hợp ~AI~, ~machine learning~.
+- Tích hợp AI, machine learning.
 - Tích hợp set lịch đăng bài cho nhà sáng tạo nội dung.
 
 ## Ngôn ngữ
@@ -31,4 +31,4 @@
 
 ## Lưu ý
 - Đây chỉ là trang giao diện demo.
-- ~Không lưu dữ liệu hoặc tích hợp AI.~
+- Không lưu dữ liệu hoặc tích hợp AI.
